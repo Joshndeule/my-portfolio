@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>About</title>
+    <style>
+          body {
+      margin: 0%;
+      padding: 0;
+    }
+
+    .container {
+      display: grid;
+      width: 100%;
+      height: 100%;
+      word-wrap: normal;
+    }
+    .topImage{
+  padding: 0.5%;
+  
+}
+    .nav {
+    background-color: blue;
+    border-style:  solid blue;
+    color: whitesmoke;
+}
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    background-color: blue;
+  }
+
+ .nav li {
+    float: right;
+    text-align: center;
+  }
+
+  .nav a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: #00222f;
+  }
+
+  .active {
+    background-color: rgb(3, 0, 46);
+  }
+  .search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-form input {
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.search-form button {
+  background-color: blue;
+  border: none;
+  cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <img class="topImage" src="Icon.jpg" alt="Simple icon" width="100" height="75">
+            <nav aria-label="primaly-navigation"></nav>
+             <ul>
+                <li>
+                    <form class="search-form">
+                        <input type="text" placeholder="Search..." />
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                      </form>
+                </li>
+                <li>
+                    <a href="#resume" class="active">Resume</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact me</a>
+                </li>
+                <li>
+                    <a href="about.html"> About me</a>
+                </li>
+                <li>
+                    <a href="myskills.html">My Skills</a>
+                </li>
+                <li>
+                    <a href="tools.html">Tools</a>
+                </li>
+                <li>
+                    <a href="technologies">Technologies</a>
+                </li>
+                <li>
+                    <a href="/#my-portfolio">My Portfolio</a>
+                </li>
+               </ul>
+            </div>
+    </div>
+    
+</body>
+</html>

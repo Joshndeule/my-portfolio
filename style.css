@@ -45,20 +45,80 @@ body{
   .content {
     background-color: whitesmoke;
     border-style: solid;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 3%;
     color: blue;
+    overflow: auto;
   }
-  .icons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 200px;
-    font-size: 24px;
+  .Daimage{
+    float: right;
+    border-radius: 50% / 70%;
   }
+p{
+  font-size: large;
+  font-family: 'Times New Roman', Times, serif;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.box {
+  float: left;
+  width: 33.33%;
+  padding: 0px;
+  height: 300px;
   
-  .icons i {
-    color: #270101;
-    cursor: pointer;
-    margin: 0 10px;
-  }
+}
+
+*{
+  box-sizing: border-box;
+}
+.skill {
+  background-color: whitesmoke;
+  padding-left: 5%;
+  padding-right: 5%;
+  justify-content: space-between;
+}
+.likeFooter {
+  background-color: black;
+  border-style: solid black;
+  color: whitesmoke;
+  padding: 3%;
+  width: 100%;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-icons i {
+  color: blue ;
+  font-size: 60px;
+}
+.topImage{
+  padding: 0.5%;
+  
+}
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-form input {
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.search-form button {
+  background-color: blue;
+  border: none;
+  cursor: pointer;
+}
