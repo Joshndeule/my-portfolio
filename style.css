@@ -38,6 +38,12 @@ body{
   li a:hover {
     background-color: #00222f;
   }
+  li a:visited {
+    color: blueviolet;
+  }
+  li a:active {
+    background-color: #00222f;
+  }
 
   .active {
     background-color: rgb(3, 0, 46);
