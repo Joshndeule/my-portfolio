@@ -44,10 +44,6 @@ body{
   li a:active {
     background-color: #00222f;
   }
-
-  .active {
-    background-color: rgb(3, 0, 46);
-  }
   .content {
     background-color: whitesmoke;
     border-style: solid;
