@@ -229,12 +229,12 @@ input[type=text],[type=email], [type=datetime], select {
     </div>
     <hr>
     <h1>WRITE ME A MESSAGE</h1>
-    <form action="">
+    <form id="jform" action="">
      <fieldset>
     <div class="form-row">
         <div class="form-group">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input  type="text" id="name" name="name" placeholder="Your Name" required>
         </div>
         <div class="form-group">
             <label for="surname">Surname:</label>
@@ -243,7 +243,7 @@ input[type=text],[type=email], [type=datetime], select {
     </div>
     <div class="form-row">
         <div class="form-group">
-            <label for="subject">Subject:</label>
+            <label for="subject" >Subject:</label>
             <input type="text" id="subject" name="subject" placeholder="Subject" required>
         </div>
         <div class="form-group">
@@ -258,10 +258,10 @@ input[type=text],[type=email], [type=datetime], select {
     <p>
         <label for="message">Your Message:</label>
         <br>
-        <textarea type="message" id="nessaga" cols="100" rows="10" placehoder="Type your message here"></textarea>
+        <textarea type="message" id="message" cols="100" rows="10" placehoder="Type your message here"></textarea>
     </p>
     </fieldset>
-        <button class="button" type="submit">Send</button>
+        <button class="button" type="submit" value="submit" onclick="myFuction()">Send</button>
 </form>
 </div>
 <footer>
@@ -280,6 +280,28 @@ input[type=text],[type=email], [type=datetime], select {
        <button class="button" type="submit" > <a href="#">Back To Top</a> </button>
     </p>
     </footer>
-   
+    <script>
+      document.getElementById("jForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Call your validation function here
+      validateForm();
+      });
+      function validateForm() {
+        var name = document.getElementById("name").value;
+        var surname = document.getElementById("surname").value;
+        var email = document.getElementById("email").value;
+        var datetime = document.getElementById("datetime").value;
+        var subject = document.getElementById("subject").value;
+        var message = document.getElementById("message").value;
+
+        if (name === "" ||surname ==="" || email === "" || datetime === "" || subject === "" || message ==="") {
+          alert("Please fill in all fields");
+          return false;
+        }
+
+        document.getElementById("jForm").submit();
+      }
+    </script>
 </body>
 </html>
