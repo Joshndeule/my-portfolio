@@ -62,7 +62,7 @@
 
 
             <div class="skill">
-                <h1 style="text-align: center;">Some of the things that i do</h1>
+                <h1 style="text-align: center;" onmouseover="change(this)" onmouseout="ngecha(this)">Some of the things that i do</h1>
                 <hr>
                 <div class="clearfix">
                     <div class="box" style="background-color:blue">
@@ -81,7 +81,6 @@
                   
             </div>
         </div>
-    </
     <footer>
     <div class="likeFooter">
         <div class="social-icons">
@@ -95,10 +94,19 @@
           <p style="text-align: right;">Contact me: <a href="mailto:joshndeule@gmail.com">joshndeul@gmail.com</a></p>
     </div>
     <p>
-        <a href="#">Back To Top</a>
+       <button> <a href="#">Back To Top</a></button>
     </p>
     </footer>
-   
+   <script>
+    function change(obj)
+    {
+        obj.innerHTML="Am Awesome you know right?!!"
+    }
+    function ngecha(obj)
+    {
+        obj.innerHTML = "Check my skills section to see more"
+    }
+   </script>
   
 </body>
 </html>

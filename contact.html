@@ -8,7 +8,7 @@
     <title>Contact me</title>
     <style>
         body {
-    margin: 0%;
+    margin: 0;
     padding: 0;
   }
 
@@ -72,7 +72,7 @@ border: none;
 cursor: pointer;
 }
 li a:visited {
-  color: blueviolet;
+  color: whitesmoke;
 }
 li a:active {
   background-color: #00222f;
@@ -147,11 +147,13 @@ input[type=text],[type=email], [type=datetime], select {
   cursor: pointer;
 }
 .likeFooter {
+  display: grid;
   background-color: black;
   border-style: solid black;
   color: whitesmoke;
   padding: 3%;
   width: 100%;
+  height: 100%;
 }
 .social-icons {
   display: flex;
@@ -219,31 +221,31 @@ input[type=text],[type=email], [type=datetime], select {
     </div>
     <hr>
     <h1>WRITE ME A MESSAGE</h1>
-    <form id="jform" action="">
+    <form id="jform" onsubmit="validateForm()">
      <fieldset>
     <div class="form-row">
         <div class="form-group">
             <label for="name">Name:</label>
-            <input  type="text" id="name" name="name" placeholder="Your Name" required>
+            <input  type="text" id="name" name="name" placeholder="Your Name" >
         </div>
         <div class="form-group">
             <label for="surname">Surname:</label>
-            <input type="text" id="surname" name="surname" placeholder="Your Surname" required>
+            <input type="text" id="surname" name="surname" placeholder="Your Surname" >
           </div>
     </div>
     <div class="form-row">
         <div class="form-group">
             <label for="subject" >Subject:</label>
-            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            <input type="text" id="subject" name="subject" placeholder="Subject" >
         </div>
         <div class="form-group">
             <label for="date">Date:</label>
-            <input type="datetime" id="datetime" name="datetime" placeholder="Date/Time" required>
+            <input type="datetime" id="datetime" name="datetime" placeholder="Date/Time" >
           </div>
     </div>
     <p>
         <label for="email">Email:</label>
-        <input type="email" name="email" id="email" placeholder="your email" required>
+        <input type="email" name="email" id="email" placeholder="your email" >
     </p>
     <p>
         <label for="message">Your Message:</label>
@@ -272,9 +274,9 @@ input[type=text],[type=email], [type=datetime], select {
     </footer>
     <script>
       document.getElementById("jForm").addEventListener("submit", function(event) {
-      event.preventDefault(); // Prevent form submission
+      event.preventDefault(); 
 
-      // Call your validation function here
+      
       validateForm();
       });
       function validateForm() {
