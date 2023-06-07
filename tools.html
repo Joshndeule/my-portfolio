@@ -10,6 +10,8 @@
         body{
     background-color: aliceblue;
     margin: 0px;
+    padding: 0;
+    font-family: Arial, sans-serif;   
 }
 .content-container{
   display: grid;
@@ -100,14 +102,96 @@
   color: blue ;
   font-size: 60px;
 }
+  #output{
+      text-align: center;
+      padding: 5%;
+      font-size: large;
+      font-family: cursive;
+  }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
 
-    </style>
+    .symbol-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;
+    }
+
+.symbol-card {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.html {
+  background-color: #4A90E2;
+  color: #FFFFFF;
+}
+
+.css {
+  background-color: #254BDD;
+  color: #FFFFFF;
+}
+
+.mysql {
+  background-color: #f5f8f9;
+  color: #6987f1;
+}
+.php{
+    background-color: #00758F;
+}
+.javascript{
+  background-color: #f2ff3f;
+}
+</style>
+<script>
+  function typingAnimation() {
+      var words = ["I am a Programmer", "Every Proggramer needs tools", "I have lots of tools that i use...", "This are some of my tools"];
+      var currentWordIndex = 0;
+      var currentWord = words[currentWordIndex];
+      var letterIndex = 0;
+      var typingSpeed = 150; // Adjust typing speed (in milliseconds)
+
+      var outputElement = document.getElementById("output");
+
+      function typeNextLetter() {
+          if (letterIndex < currentWord.length) {
+              outputElement.textContent += currentWord.charAt(letterIndex);
+              letterIndex++;
+              setTimeout(typeNextLetter, typingSpeed);
+          } else {
+              setTimeout(deleteWord, typingSpeed);
+          }
+}
+
+      function deleteWord() {
+          if (letterIndex >= 0) {
+              outputElement.textContent = currentWord.substring(0, letterIndex);
+              letterIndex--;
+              setTimeout(deleteWord, typingSpeed);
+          } else {
+              currentWordIndex = (currentWordIndex + 1) % words.length;
+              currentWord = words[currentWordIndex];
+              setTimeout(typeNextLetter, typingSpeed);
+          }
+      }
+
+      typeNextLetter();
+  }
+</script>
 </head>
 <body>
     <div class="content-container">
         <div class="nav">
             <img class="topImage" src="Icon.jpg" alt="Simple icon" width="100" height="75">
-            <nav aria-label="primaly-navigation"></nav>
+            <nav ria-label="primaly-navigation"></nav>
              <ul>
                 <li>
                     <form class="search-form">
@@ -132,10 +216,35 @@
                 </li>
                </ul>
             </div>
+            <body onload="typingAnimation()">
+              <div id="output"></div>
 
-
-
-
+              <div class="container">
+                <div class="symbol-grid">
+                  <div class="symbol-card html">
+                    <h2>&lt;HTML&gt;</h2>
+                    
+                    <img src="assets/HTML5.png" alt="HTML logo" width="50" height="50">
+                  </div>
+                  <div class="symbol-card css">
+                    <h2>CSS</h2>
+                    <img src="assets/CSS-Logo.png" alt="CSS Logo" width="100" height="50">
+                  </div>
+                  <div class="symbol-card javascript">
+                    <h2>JS</h2>
+                    <img src="assets/js.png" alt="JS" width="50" height="50">
+                  </div>
+                  <div class="symbol-card mysql">
+                    <h2>MySQL</h2>
+                    <img src="assets/MySql.jpg" alt="MySQL" width="50" height="50">
+                </div>
+                  <div class="symbol-card php" style="text-align: center;">
+                    <h2>PHP</h2>
+                    <img src="assets/php_PNG23.png" alt="php" width="50" height="50">
+                </div>
+                </div>
+                </div>
+          </body>
 
             <footer>
                 <div class="likeFooter">
