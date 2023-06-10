@@ -175,19 +175,19 @@ li a:visited {
                       </form>
                 </li>
                 <li>
-                    <a href="contact.html">Contact Me</a>
+                    <a href="contact.php">Contact Me</a>
                 </li>
                 <li>
-                    <a href="myskills.html">My Skills</a>
+                    <a href="myskills.php">My Skills</a>
                 </li>
                 <li>
-                    <a href="tools.html">Tools</a>
+                    <a href="tools.php">Tools</a>
                 </li>
                 <li>
-                    <a href="technologies.html">Technologies</a>
+                    <a href="technologies.php">Technologies</a>
                 </li>
                 <li>
-                    <a href="index.html">My Portfolio</a>
+                    <a href="index.php">My Portfolio</a>
                 </li>
                </ul>
             </div>

@@ -21,16 +21,16 @@
                       </form>
                 </li>
                 <li>
-                    <a href="contact.html">Contact me</a>
+                    <a href="contact.php">Contact me</a>
                 </li>
                 <li>
-                    <a href="myskills.html">My skills</a>
+                    <a href="myskills.php">My skills</a>
                 </li>
                 <li>
-                    <a href="tools.html">Tools</a>
+                    <a href="tools.php">Tools</a>
                 </li>
                 <li>
-                    <a href="technologies.html">Technologies</a>
+                    <a href="technologies.php">Technologies</a>
                 </li>
                 <li>
                     <a href="/">My Portfolio</a>
