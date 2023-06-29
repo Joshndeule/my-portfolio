@@ -51,7 +51,7 @@
                 Ict Student <br>
                 JOSHUA NDEULLE
             </h1>
-            <P>
+            <P class="call">
                 Information and Communication Technology is the heartbeat of our interconnected world. It is the driving force behind the seamless exchange of knowledge, the catalyst for innovation, and the enabler of progress. In this digital age, I am passionate about harnessing the power of ICT to unlock new frontiers, solve complex problems, and shape a future that is smarter, more inclusive, and sustainable. As an ICT enthusiast, I embrace the challenges, adapt to the rapid pace of change, and continuously strive to expand my skills and knowledge. Together, let us navigate the vast realm of technology and create a positive impact that resonates far beyond the digital realm.
             </P>
             <p>Take your time!</p>

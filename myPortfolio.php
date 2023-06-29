@@ -1,47 +1,22 @@
 <?php
-$servername = "localhost";
+$server = "localhost";
 $username = "root";
-$password = "";
-$dbname = "my_portfolio"; 
+$dbpassword = "";
+$dbName = "my_portfolio"; 
 
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = mysqli_connect($server, $username, $dbpassword, $dbName);
 
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+else{
+    echo "Connection Successful<br/>";
 }
 
-
-$sql = "CREATE DATABASE IF NOT EXISTS my_portfolio";
-if ($conn->query($sql) === TRUE) {
-    echo "Database created successfully";
-} else {
-    echo "Error creating database: " . $conn->error;
-    $conn->close();
-    exit;
-}
-
-
-$conn->select_db('my_portfolio');
-
-
-$sql = "CREATE TABLE IF NOT EXISTS users (
-    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(50) NOT NULL,
-    email VARCHAR(50) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-)";
-
-if ($conn->query($sql) === TRUE) {
-    echo "Table created successfully";
-} else {
-    echo "Error creating table: " . $conn->error;
-
-}
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $id = $_POST["Id"];
+//check if all required fields are set
+if(isset($_POST["submit"])){
     $name = $_POST["name"];
     $surname = $_POST["surname"];
     $email = $_POST["email"];
@@ -49,17 +24,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject = $_POST["subject"];
     $message = $_POST["message"];
 
-    $querry = "INSERT INTO Contacts (name, surname, email, datetime, subject, message)
-    VALUES ('$name', '$surname', '$email', '$datetime, '$subject', '$message')";
+    $sql = "INSERT INTO contacts (name, surname, email, datetime, subject, message)
+    VALUES ('$name', '$surname', '$email', '$datetime', '$subject', '$message')";
 
-if($connection->query($sql)===true){
-    echo "message sent successfully.";
+if(mysqli_query($conn, $sql)) {
 
     header("location: contact.php");
-    exit;
-} else {
-    echo "Error: ". $sql . "<br>" .$connection->error;
+    exit();
+}else{
+    echo "Error: Message failed to send <br>";
 }
-}
+
+
+
 $conn->close();
+}
 ?>

@@ -221,7 +221,7 @@ input[type=text],[type=email], [type=datetime], select {
     </div>
     <hr>
     <h1>WRITE ME A MESSAGE</h1>
-    <form id="jform" onsubmit="validateForm()">
+    <form action="myPortfolio.php" method="post" id="jform" onsubmit="validateForm()">
      <fieldset>
     <div class="form-row">
         <div class="form-group">
@@ -240,7 +240,7 @@ input[type=text],[type=email], [type=datetime], select {
         </div>
         <div class="form-group">
             <label for="date">Date:</label>
-            <input type="datetime" id="datetime" name="datetime" placeholder="Date/Time" >
+            <input type="date" id="datetime" name="datetime" placeholder="Date/Time" >
           </div>
     </div>
     <p>
@@ -250,10 +250,10 @@ input[type=text],[type=email], [type=datetime], select {
     <p>
         <label for="message">Your Message:</label>
         <br>
-        <textarea type="message" id="message" cols="100" rows="10" placehoder="Type your message here"></textarea>
+        <textarea type="message" id="message" name="message" cols="100" rows="10" placehoder="Type your message here"></textarea>
     </p>
     </fieldset>
-        <button class="button" type="submit" value="submit" onclick="myFuction()">Send</button>
+        <button class="button" type="submit" value="submit" name="submit" onclick="myFuction()">Send</button>
 </form>
 </div>
 <footer>
